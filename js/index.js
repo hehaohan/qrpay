@@ -1,3 +1,7 @@
+/* Created by AEINK on 2019-3-31.
+ * Revised by redy on 2019-3-31.
+ */
+
 function urlEncode(String) {
     return encodeURIComponent(String).replace(/'/g,"%27").replace(/"/g,"%22");
 }
@@ -24,12 +28,12 @@ function getObjectURL(file){
 }
 
 $(document).ready(function() {
-    $("#alipay,#wechat,#qq,#jd,#bd").change(function($this) {
+    $("#alipay,#wechat,#qaq,#jd,#bd").change(function($this) {
         handleFiles(this);
     });
-    $("#qaq").change(function($this) {
+    $("#qq").change(function($this) {
         var formData = new FormData();
-        formData.append('Filedata', $('#qaq')[0].files[0]);
+        formData.append('Filedata', $('#qq')[0].files[0]);
         var scan = layer.msg('识别中,请稍候！', { icon: 16 ,shade: 0.01,time: 2000000});
         $.ajax({
             url: 'https://upload.api.cli.im/upload.php?kid=cliim',
@@ -42,8 +46,8 @@ $(document).ready(function() {
                 var data = $.parseJSON(a);
                 console.log(data);
                 if(data.status==1){
-                    $.get('https://api.isoyu.com/qr/deqr.php?imgurl=',{url:data.data.path}, function(qr) {
-                        $('#qaq_url').val(qr.qrurl);
+                    $.get('https://api.eei8.cn/api/qra.php?url=',{url:data.data.path}, function(qr) {
+                        $('#qq_url').val(qr.qrurl);
                         layer.close(scan);
                         console.log(qr);
                     });
@@ -71,6 +75,7 @@ $(document).ready(function() {
         jd = urlEncode($('#jd_url').val()),
         bd = urlEncode($('#bd_url').val()),
         uin = urlEncode($('#uin').val()),
+        PayPal = urlEncode($('#PayPal').val()),
         data = tpl_data[tpl_id];
 
         if (uin.search(/^[1-9][0-9]{4,}$/) ==-1){layer.msg("请输入正确QQ号码！");return false;}
