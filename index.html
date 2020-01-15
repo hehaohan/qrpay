@@ -41,7 +41,7 @@
 
         <form class="am-form" id="shorturl">
             <div class="am-form-group">
-                 <input type="tel" maxlength="11" name="uin" id="uin" placeholder="商户QQ号">     
+                 <input type="tel" maxlength="11" name="uin" id="uin" placeholder="商户QQ号">
             </div>
             <div class="am-form-group am-g-collapse">
               <div class="am-u-sm-8">
@@ -75,7 +75,7 @@
               <div class="am-form-group am-form-file">
                 <button type="button" class="am-btn am-btn-danger am-btn-sm"><i class="am-icon-cloud-upload"></i> 选择 京 东 收款码</button> <input id="jd" type="file" accept="image/*">
               </div>
-            </div>    
+            </div>
           <div class="am-form-group am-g-collapse">
               <div class="am-u-sm-8">
                 <input type="text" name="jd_url" id="bd_url" value="" placeholder="百度钱包收款链接">
@@ -83,8 +83,8 @@
               <div class="am-form-group am-form-file">
                 <button type="button" class="am-btn am-btn-danger am-btn-sm"><i class="am-icon-cloud-upload"></i> 选择 百 度 收款码</button> <input id="bd" type="file" accept="image/*">
               </div>
-            </div>   
-          
+            </div>
+
             <br>
                 <ul class="am-avg-sm-3 am-thumbnails">
                     <style type="text/css">
@@ -133,7 +133,7 @@
                         </label>
                         </div>
                     </li>
- 
+
                    <li>
                         <div class="am-thumbnail">
                         <label class="text-muted">
@@ -323,12 +323,6 @@
     tpl_data[19]={tpl_w:916,tel_h:1491,tpl_src:'img/19.jpg',qr_x:296,qr_y:399,qrsize:322};
     tpl_data[20]={tpl_w:1080,tel_h:1451,tpl_src:'img/20.jpg',qr_x:407,qr_y:823,qrsize:300};
 	tpl_data[21]={tpl_w:554,tel_h:391,tpl_src:'img/21.jpg',qr_x:311,qr_y:116,qrsize:210};
-    layer.confirm('请前往新站点！', {
-      btn: ['前往','忽略'] //按钮
-    }, function(){
-      window.location.href='https://qrpay.isoyu.com';
-      layer.msg('走着您嘞！', {icon: 1});
-    });
 </script>
 <script src="js/llqrcode.js"></script>
 <script src="js/index.js"></script>
@@ -346,18 +340,6 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-setTimeout(function(){ support(); }, 5000);
-function support(argument) {
-    layer.open({
-      type: 1 
-      ,area: ['370px', '500px']
-      ,title: '永久免费，请捐助我。'
-      ,shade: 0.6 
-      ,maxmin: true 
-      ,anim: 2
-      ,content: '<div style="text-align:center;"><br/>打开支付宝搜索“553098750” 领取现金红包<br/>扫码下方二维码进行现金打赏<br/><img src="https://ws3.sinaimg.cn/large/005BYqpggy1g1kz2p8d69j308c08c0b0.jpg"><br />本站永久免费生成<br />请不要让本站欠费跑路！<br /></div>'
-    });
-}
      function init(){
         var len = 60;      //默认显示字数
         var ctn = document.getElementById("contents");  //获取div对象
