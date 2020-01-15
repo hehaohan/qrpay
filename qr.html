@@ -11,7 +11,7 @@
 <script type="text/javascript" src="https://lib.baomitu.com/clipboard.js/1.7.1/clipboard.min.js"></script>
 <script type="text/javascript" src="https://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
 <meta itemprop="name" content="四合一收款码"/>
-<meta itemprop="image" content="https://www.kuaizhan.com/common/encode-png?large=true&data=api.isoyu.com/qrpay/" />
+<meta itemprop="image" content="https://www.kuaizhan.com/common/encode-png?large=true&data=hehaohan.github.io/qrpay/" />
 <meta name="description" itemprop="description" content="多功能收款码,QQ/微信/支付宝/京东 四合一收款码,姬长信,API,收款码,付款码,五合一收款码,收款码美化,支付宝收款码,微信支付宝二维码合并,微信支付宝二维码合一,微信支付宝收款二维码,微信支付宝二维码整合,一码付,微信支付宝二维码,聚合支付,api.isoyu.com/qrpay/" />
 <link href="./css/style.css"rel="stylesheet">
 <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
@@ -68,11 +68,11 @@
           document.getElementById("qnick").innerHTML = json.name;
       });
     }
-    function convertCanvasToImage() {  
+    function convertCanvasToImage() {
         var canvas=document.getElementsByTagName('canvas')[0];
-        var image = new Image();  
-        data = canvas.toDataURL("image/jpeg");  
-        return data;  
+        var image = new Image();
+        data = canvas.toDataURL("image/jpeg");
+        return data;
     }
     function pkJJLRCse(pkJJLRCse){document.write(unescape(pkJJLRCse));};
     var s_height = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
@@ -97,7 +97,7 @@
         var clipboard = new Clipboard('*', {
             text: function() {
                 return qrcode;
-            } 
+            }
         });
         clipboard.on('success', function(e) {
             console.log(e.text);
@@ -135,7 +135,7 @@
     (function() {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?fda02e31e77cd366043a929e3043c19f";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
