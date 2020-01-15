@@ -82,7 +82,7 @@ $(document).ready(function() {
 
         var qrImg = document.getElementById("temp");
         qrImg.crossOrigin = 'Anonymous';
-        qrImg.src = 'https://www.kuaizhan.com/common/encode-png?large=true&data=https://hehaohan.github.io/qrpay/qr.html?ali='+ali+'%26qq='+qq+'%26vx='+vx+'%26jd='+jd+'%26bd='+bd+'%26uin='+uin;
+        qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url=https://hehaohan.github.io/qrpay/qr.html?ali='+ali+'%26vx='+vx+'%26qq='+qq+'%26jd='+jd+'%26bd='+bd+'%26PayPal='+PayPal+'%26uin='+uin;
         $(qrImg).load(function(){
             setTimeout(resetCanvas(data,tpl_id,loading),500);
         });
