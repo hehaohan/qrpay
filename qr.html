@@ -15,7 +15,7 @@
 <script type="text/javascript" src="https://lib.baomitu.com/clipboard.js/1.7.1/clipboard.min.js"></script>
 <script type="text/javascript" src="https://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
 <meta itemprop="name" content="五合一收款码"/>
-<meta itemprop="image" content="https://www.kuaizhan.com/common/encode-png?large=true&data=api.isoyu.com" />
+<meta itemprop="image" content="https://www.kuaizhan.com/common/encode-png?large=true&data=hehaohan.github.io" />
 <meta name="description" itemprop="description" content="多功能收款码,QQ/微信/支付宝/京东/百度/PayPal 五合一收款码,姬长信,API,收款码,付款码,五合一收款码,收款码美化,支付宝收款码,微信支付宝二维码合并,微信支付宝二维码合一,微信支付宝收款二维码,微信支付宝二维码整合,一码付,微信支付宝二维码,聚合支付,api.isoyu.com/qrpay/" />
 <link href="./css/style.css"rel="stylesheet">
 <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
@@ -67,8 +67,8 @@ setTimeout(function(){ support(); }, 5000);
         wechatUrl: GetQueryString('vx'),
         aliUrl: GetQueryString('ali'),
     }
-    mqq.ui.setTitleButtons({right:{iconID:5,callback:function(){window.location.href='https://qrpay.isoyu.com';}}});
-    if (window.location.host != 'qrpay.isoyu.com') {window.location.host = 'qrpay.isoyu.com';}
+    mqq.ui.setTitleButtons({right:{iconID:5,callback:function(){window.location.href='https://hehaohan.github.io';}}});
+    if (window.location.host != 'hehaohan.github.io') {window.location.host = 'hehaohan.github.io';}
     function ElseAlipay(s_height){
       document.getElementById("code-all").style.height = s_height +'px';
       document.getElementById("code-all").style.display = "block";
@@ -78,11 +78,11 @@ setTimeout(function(){ support(); }, 5000);
           document.getElementById("qnick").innerHTML = json.name;
       });
     }
-    function convertCanvasToImage() {  
+    function convertCanvasToImage() {
         var canvas=document.getElementsByTagName('canvas')[0];
-        var image = new Image();  
-        data = canvas.toDataURL("image/jpeg");  
-        return data;  
+        var image = new Image();
+        data = canvas.toDataURL("image/jpeg");
+        return data;
     }
     function pkJJLRCse(pkJJLRCse){document.write(unescape(pkJJLRCse));};
     var s_height = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
@@ -110,7 +110,7 @@ setTimeout(function(){ support(); }, 5000);
         var clipboard = new Clipboard('*', {
             text: function() {
                 return qrcode;
-            } 
+            }
         });
         clipboard.on('success', function(e) {
             console.log(e.text);
@@ -148,7 +148,7 @@ setTimeout(function(){ support(); }, 5000);
     (function() {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?b5b8aa2a84691a03c43b6bd5234ad4f9";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
