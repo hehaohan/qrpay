@@ -82,7 +82,7 @@ $(document).ready(function() {
 
         var qrImg = document.getElementById("temp");
         qrImg.crossOrigin = 'Anonymous';
-        qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url=https://qr.hehaohan.com/qr.html?ali='+ali+'%26vx='+vx+'%26qq='+qq+'%26jd='+jd+'%26bd='+bd+'%26PayPal='+PayPal+'%26uin='+uin;
+        qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url=http://dev.icoody.cn/short/create?unionId=eaaf0f441bd2467992f3958e4ddc03d5&url=https://qr.hehaohan.com/qr.html?ali='+ali+'%26vx='+vx+'%26qq='+qq+'%26jd='+jd+'%26bd='+bd+'%26PayPal='+PayPal+'%26uin='+uin;
         $(qrImg).load(function(){
             setTimeout(resetCanvas(data,tpl_id,loading),500);
         });
