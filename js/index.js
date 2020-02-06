@@ -80,7 +80,7 @@ $(document).ready(function() {
 
         if (uin.search(/^[1-9][0-9]{4,}$/) ==-1){layer.msg("请输入正确QQ号码！");return false;}
 
-      var qrImg = document.getElementById("temp");
+        var qrImg = document.getElementById("temp");
         qrImg.crossOrigin = 'Anonymous';
         qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url=https://qr.hehaohan.com/qr.html?ali='+ali+'%26vx='+vx+'%26qq='+qq+'%26jd='+jd+'%26bd='+bd+'%26PayPal='+PayPal+'%26uin='+uin;
         $(qrImg).load(function(){
