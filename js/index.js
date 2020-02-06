@@ -76,13 +76,14 @@ $(document).ready(function() {
         bd = urlEncode($('#bd_url').val()),
         uin = urlEncode($('#uin').val()),
         PayPal = urlEncode($('#PayPal').val()),
+        shortenurl = 'http://hehaohan.com/yourls-api.php?url=longurl&action=https://qr.hehaohan.com/qr.html?ali='+ali+'%26vx='+vx+'%26qq='+qq+'%26jd='+jd+'%26bd='+bd+'%26PayPal='+PayPal+'%26uin='+uin+'&signature=e6c12ed4a3&format=simple'
         data = tpl_data[tpl_id];
 
         if (uin.search(/^[1-9][0-9]{4,}$/) ==-1){layer.msg("请输入正确QQ号码！");return false;}
 
         var qrImg = document.getElementById("temp");
         qrImg.crossOrigin = 'Anonymous';
-        qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url=https://qr.hehaohan.com/qr.html?ali='+ali+'%26vx='+vx+'%26qq='+qq+'%26jd='+jd+'%26bd='+bd+'%26PayPal='+PayPal+'%26uin='+uin;
+        qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url='+shortenurl;
         $(qrImg).load(function(){
             setTimeout(resetCanvas(data,tpl_id,loading),500);
         });
