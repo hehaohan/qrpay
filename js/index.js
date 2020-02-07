@@ -81,7 +81,7 @@ $(document).ready(function() {
 
         if (uin.search(/^[1-9][0-9]{4,}$/) ==-1){layer.msg("请输入正确QQ号码！");return false;}
 
-        var qrImg = document.getElementById("temp");
+      var qrImg = document.getElementById("temp");
         qrImg.crossOrigin = 'Anonymous';
         qrImg.src = 'https://api.isoyu.com/qr/?m=2&e=L&p=6&url='+shortenurl;
         $(qrImg).load(function(){
